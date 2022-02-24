@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all qcom products
-# that inherit from Lineage
+# that inherit from Proton
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -11,12 +11,12 @@ endif
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/aosp/sepolicy/qcom/dynamic \
-    device/aosp/sepolicy/qcom/system
+    device/proton/sepolicy/qcom/dynamic \
+    device/proton/sepolicy/qcom/system
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/aosp/sepolicy/qcom/dynamic \
-    device/aosp/sepolicy/qcom/vendor
+    device/proton/sepolicy/qcom/dynamic \
+    device/proton/sepolicy/qcom/vendor
 endif
 
 ifeq (,$(filter msm8226 msm8610 msm8974 msm8909 msm8916 msm8952 msm8992 msm8994 msm8937 msm8953 msm8996 msm8998 sdm660 sdm710 sdm845, $(TARGET_BOARD_PLATFORM)))
